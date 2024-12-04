@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 
 const Register = () => {
-    const { createUser, updateUserProfile, signinWithGoogle } = useContext(AuthContex)
+    const { createUser, updateUserProfile, signInUserWithGoogle } = useContext(AuthContex)
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -17,7 +17,7 @@ const Register = () => {
     };
 
     const handleGoogleSignin = () => {
-        signinWithGoogle()
+        signInUserWithGoogle()
     }
 
     const handleSubmit = (e) => {

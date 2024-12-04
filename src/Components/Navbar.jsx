@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContex } from '../Providers/AuthProvider';
 
 const Navbar = () => {
 
+    const { signoutUser, user } = useContext(AuthContex)
     const links = <>
         <Link to={'/'}>Home</Link>
         <Link to={'/campaigns'}>All Campaign</Link>
         <Link to={'/addCampaign'}>Add New Campaign</Link>
         <Link to={'/myCampaign'}>My  Campaign</Link>
         <Link to={'/myDonations'}>My Donations</Link>
-        <Link to={'/login'}>Log in</Link>
-        <Link to={'/register'}>Register</Link>
     </>
     return (
-        <div className="navbar bg-base-100 w-[95%] lg:[w-85%] mx-auto">
+        <div className="navbar bg-base-100 h-10 md:h-14 w-[95%] lg:[w-85%] mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {links}
+                        {links}
                     </ul>
                 </div>
                 <Link to={'/'} className="btn btn-ghost text-xl">FundBridge</Link>
@@ -43,8 +43,27 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end space-x-5">
+                {
+                    user ?
+                        <>
+                            <div className="relative group w-10 md:w-14">
+                                <img
+                                    className="w-10 md:w-14 rounded-full group-hover:hidden"
+                                    src={`${user.photoURL}`}
+                                    alt=""
+                                />
+                                <h2 className="absolute inset-0 hidden group-hover:flex justify-center items-center text-black">
+                                    {user.displayName}
+                                </h2>
+                            </div>
+                            <button onClick={signoutUser} className='text-base bg-[#FFA415] ml-2 md:ml-4 px-3 md:px-5 py-2 md:py-3 rounded-xl font-medium'>Logout</button>
+                        </> :
+                        <>
+                            <Link to={'/login'}>Log in</Link>
+                            <Link to={'/register'}>Register</Link>
+                        </>
+                }
             </div>
         </div>
     );

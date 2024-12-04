@@ -13,6 +13,7 @@ import MyDonationsLayout from './Layouts/MyDonationsLayout';
 import LoginLayout from './Layouts/LoginLayout';
 import RegisterLayout from './Layouts/RegisterLayout';
 import AuthProvider from './Providers/AuthProvider';
+import PrivateRoute from './Layouts/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -25,15 +26,21 @@ const router = createBrowserRouter([
   },
   {
     path: "addCampaign",
-    element: <AddCampaignsLayout></AddCampaignsLayout>
+    element: <PrivateRoute>
+                <AddCampaignsLayout></AddCampaignsLayout>
+            </PrivateRoute>
   },
   {
     path: "myCampaign",
-    element: <MyCampaignsLayout></MyCampaignsLayout>
+    element: <PrivateRoute>
+                <MyCampaignsLayout></MyCampaignsLayout>
+            </PrivateRoute>
   },
   {
     path: "myDonations",
-    element: <MyDonationsLayout></MyDonationsLayout>
+    element: <PrivateRoute>
+                <MyDonationsLayout></MyDonationsLayout>
+            </PrivateRoute>
   },
   {
     path: "login",
