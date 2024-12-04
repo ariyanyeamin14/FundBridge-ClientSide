@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
+import Banner from '../Components/Banner';
+import RunningCampaign from '../Components/RunningCampaign';
 
 const HomeLayout = () => {
     return (
@@ -7,6 +9,12 @@ const HomeLayout = () => {
             <nav>
                 <Navbar></Navbar>
             </nav>
+            <section>
+                <Banner></Banner>
+            </section>
+            <section>
+                <RunningCampaign></RunningCampaign>
+            </section>
         </div>
     );
 };
