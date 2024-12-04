@@ -14,11 +14,14 @@ import LoginLayout from './Layouts/LoginLayout';
 import RegisterLayout from './Layouts/RegisterLayout';
 import AuthProvider from './Providers/AuthProvider';
 import PrivateRoute from './Layouts/PrivateRoute';
+import ErrorPage from './Layouts/ErrorPage';
+import CampaignDetails from './Layouts/CampaignDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeLayout></HomeLayout>
+    element: <HomeLayout></HomeLayout>,
+    loader: () => fetch('http://localhost:5000/campaigns')
   },
   {
     path: "campaigns",
@@ -49,6 +52,15 @@ const router = createBrowserRouter([
   {
     path: "register",
     element: <RegisterLayout></RegisterLayout>
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>
+  },
+  {
+    path: "campaign/:id",
+    element: <CampaignDetails></CampaignDetails>,
+    loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
   }
 ]);
 
