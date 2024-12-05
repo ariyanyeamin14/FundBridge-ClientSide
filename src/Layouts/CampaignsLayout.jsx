@@ -7,6 +7,9 @@ const CampaignsLayout = () => {
     return (
         <div>
             <div className="overflow-x-auto w-[85%] mx-auto my-20">
+                <h2 className="card-title text-3xl lg:text-5xl my-14">
+                    All Campaigns
+                </h2>
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -27,7 +30,7 @@ const CampaignsLayout = () => {
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
                                 <td>
-                                <Link to={`/campaign/${campaign._id}`} className="btn btn-primary">See More</Link>
+                                    <Link to={`/campaign/${campaign._id}`} className="btn btn-primary">See More</Link>
                                 </td>
                             </tr>)
                         }

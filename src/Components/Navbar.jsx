@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to={'/'}>Home</Link>
         <Link to={'/campaigns'}>All Campaign</Link>
         <Link to={'/addCampaign'}>Add New Campaign</Link>
-        <Link to={'/myCampaign'}>My  Campaign</Link>
+        <Link to={`/myCampaign/${user?.email}`}>My  Campaign</Link>
         <Link to={'/myDonations'}>My Donations</Link>
     </>
     return (
