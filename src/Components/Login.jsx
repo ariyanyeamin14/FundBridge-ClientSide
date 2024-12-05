@@ -34,7 +34,7 @@ const Login = () => {
                     icon: "error",
                     title: "Oops...",
                     text: `${errorMessage}`,
-                    footer: '<a href="#">Why do I have this issue?</a>'
+                    footer: 'Please try again'
                   });
             });
     }

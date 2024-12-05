@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Navbar from '../Components/Navbar';
+import { AuthContex } from '../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const CampaignDetails = () => {
+    const {user} = useContext(AuthContex)
     const campaign = useLoaderData()
     const { _id, title, image, type, description, minDonation, deadline, name, email } = campaign
 
     const handleDonate = () => {
-        console.log()
+        const donatorName = user.displayName
+        const donatorEmail = user.email
+        const NewDonations = {title, image, type, description, minDonation, deadline, name, email, donatorName, donatorEmail}
+
         // send data to the server
-        fetch('http://localhost:5000/campaigns', {
+        fetch('http://localhost:5000/donations', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newCampaign)
+            body: JSON.stringify(NewDonations)
         })
             .then(res => res.json())
             .then(data => {
@@ -22,11 +27,10 @@ const CampaignDetails = () => {
                 if (data.acknowledged) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Your campaign added successfully',
+                        text: 'Your donations added successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Done'
                     })
-                    form.reset()
                 }
             })
     }
@@ -48,7 +52,7 @@ const CampaignDetails = () => {
                         <p className='text-lg lg:text-xl'>Campain Creator: {name}</p>
                         <p className='text-lg lg:text-xl'>Contact: {email}</p>
                         <div className="card-actions">
-                            <button onClick={() => handleDonate(name, email)} className="btn btn-primary btn-lg">Donate</button>
+                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn btn-primary btn-lg">Donate</button>
                         </div>
                     </div>
                 </div>
