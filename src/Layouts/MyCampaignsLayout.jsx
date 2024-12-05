@@ -63,7 +63,7 @@ const MyCampaignsLayout = () => {
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
                                 <td className='space-x-5'>
-                                    <Link to={`/campaign/${campaign._id}`} className="btn btn-primary">Update</Link>
+                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary">Update</Link>
                                     <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary">Delete</button>
                                 </td>
                             </tr>)

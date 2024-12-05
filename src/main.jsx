@@ -17,6 +17,7 @@ import PrivateRoute from './Layouts/PrivateRoute';
 import ErrorPage from './Layouts/ErrorPage';
 import CampaignDetails from './Layouts/CampaignDetails';
 import MainLayout from './MainLayout';
+import UpdateCampaign from './Layouts/UpdateCampaign';
 
 const router = createBrowserRouter([
   {
@@ -39,13 +40,12 @@ const router = createBrowserRouter([
           <AddCampaignsLayout></AddCampaignsLayout>
         </PrivateRoute>
       },
-    
       {
         path: "myCampaign/:email",
         element: <PrivateRoute>
           <MyCampaignsLayout></MyCampaignsLayout>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/campaigns/${params.email}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/campaigns/${params.email}`)
       },
       {
         path: "myDonations",
@@ -67,6 +67,13 @@ const router = createBrowserRouter([
           <CampaignDetails></CampaignDetails>
         </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/campaign/${params.id}`)
+      },
+      {
+        path: "updateCampaign/:id",
+        element: <PrivateRoute>
+          <UpdateCampaign></UpdateCampaign>
+        </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
       }
     ]
   },
