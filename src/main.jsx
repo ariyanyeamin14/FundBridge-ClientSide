@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        loader: () => fetch('http://localhost:5000/campaigns')
+        loader: () => fetch('http://localhost:5000/campaigns6')
       },
       {
         path: "campaigns",
