@@ -32,9 +32,6 @@ const CampaignDetails = () => {
     }
     return (
         <div>
-            <nav>
-                <Navbar></Navbar>
-            </nav>
             <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto my-20">
                 <figure className="">
                     <img src={image}

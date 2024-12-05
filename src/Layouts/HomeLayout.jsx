@@ -6,9 +6,6 @@ import RunningCampaign from '../Components/RunningCampaign';
 const HomeLayout = () => {
     return (
         <div>
-            <nav>
-                <Navbar></Navbar>
-            </nav>
             <section>
                 <Banner></Banner>
             </section>

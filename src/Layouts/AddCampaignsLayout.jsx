@@ -45,20 +45,11 @@ const AddNewCampaign = () => {
                     form.reset()
                 }
             })
-        // Log form data
-        console.log(
-            newCampaign
-        );
-
-        // You can now send this data to your backend or perform any desired action.
     };
 
     return (
-        <div>
-            <nav>
-                <Navbar></Navbar>
-            </nav>
-            <div className="min-h-screen bg-gray-100 flex justify-center items-center">
+        <div className=''>
+            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20">
                 <div className="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md">
                     <h1 className="text-2xl font-semibold mb-6 text-gray-800">
                         Add New Campaign
@@ -105,10 +96,10 @@ const AddNewCampaign = () => {
                                 <option value="" disabled>
                                     Select type
                                 </option>
-                                <option value="personal">Personal Issue</option>
-                                <option value="startup">Startup</option>
-                                <option value="business">Business</option>
-                                <option value="creative">Creative Ideas</option>
+                                <option value="Personal Issue">Personal Issue</option>
+                                <option value="Startup">Startup</option>
+                                <option value="Business">Business</option>
+                                <option value="Creative Ideas">Creative Ideas</option>
                             </select>
                         </div>
 

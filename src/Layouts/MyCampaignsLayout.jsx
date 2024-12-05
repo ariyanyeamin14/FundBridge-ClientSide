@@ -4,9 +4,6 @@ import Navbar from '../Components/Navbar';
 const MyCampaignsLayout = () => {
     return (
         <div>
-            <nav>
-                <Navbar></Navbar>
-            </nav>
             <h1>my campaigns</h1>
         </div>
     );
