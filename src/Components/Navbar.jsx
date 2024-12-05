@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link to={'/campaigns'}>All Campaign</Link>
         <Link to={'/addCampaign'}>Add New Campaign</Link>
         <Link to={`/myCampaign/${user?.email}`}>My  Campaign</Link>
-        <Link to={'/myDonations'}>My Donations</Link>
+        <Link to={`/myDonations/${user?.email}`}>My Donations</Link>
     </>
     return (
         <div className="navbar bg-base-100 h-10 md:h-14 w-[95%] lg:[w-85%] mx-auto">

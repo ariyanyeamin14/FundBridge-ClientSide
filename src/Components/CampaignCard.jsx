@@ -9,10 +9,10 @@ const CampaignCard = ({campaign}) => {
             <figure>
                 <img className='h-[250px] lg:h-[280px] xl:h-[350px]' src={image} />
             </figure>
-            <div className="card-body">
+            <div className="card-body space-y-5">
                 <h2 className="card-title lg:text-2xl">{title}</h2>
                 <p className='font-normal'>{description}</p>
-                <p>Deadline: {deadline}</p>
+                <p className='text-lg'>Deadline: {deadline}</p>
                 <div className="card-actions justify-end">
                     <Link to={`/campaign/${_id}`} className="btn btn-primary">See More</Link>
                 </div>
