@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 const MyCampaignsLayout = () => {
     const loadedCampaigns = useLoaderData()
     const [campaigns, setCampaigns] = useState(loadedCampaigns)
-    console.log(campaigns)
 
     const handleDelete = (id) => {
         Swal.fire({

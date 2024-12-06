@@ -5,7 +5,6 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const MyDonationsLayout = () => {
     const donations = useLoaderData()
-    console.log(donations)
     return (
         <div className='w-[90%] md:w-[85%] mx-auto my-20 min-h-screen'>
             <h1 className='text-3xl lg:text-5xl font-bold text-center my-20'>

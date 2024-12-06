@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContex } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import CustomAnimation from '../Components/CustomAnimation';
+import { Typewriter } from 'react-simple-typewriter';
 
 const CampaignDetails = () => {
     const { user } = useContext(AuthContex)
@@ -56,7 +57,17 @@ const CampaignDetails = () => {
                 </figure>
                 <div className="items-center text-left">
                     <div className='text-left space-y-8'>
-                        <h2 className="card-title text-3xl lg:text-5xl my-14">{title}</h2>
+                        <h2 className="card-title text-3xl lg:text-5xl my-14">
+                            <Typewriter
+                                words={[`${title}`, `${title}`]}
+                                loop={5}
+                                cursor
+                                cursorStyle='|'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={2000}
+                            />
+                        </h2>
                         <p className='text-lg lg:text-xl'>{description}</p>
                         <p className='text-lg lg:text-xl'>{type}</p>
                         <p className='text-lg lg:text-xl'>Minimum Ammount of Donation: {minDonation} </p>
