@@ -43,7 +43,7 @@ const Login = () => {
         setEmail(e.target.value);
     };
     return (
-        <div className='w-[90%] md:w-[85%] mx-auto my-20 '>
+        <div className='w-[90%] md:w-[85%] mx-auto min-h-screen '>
             <div className='text-center'>
                 <div className="btn btn-ghost nav-logo text-xl lg:text-2xl font-extrabold mb-10"><p>FundBridge</p> </div>
                 <h2 className=' text-4xl font-semibold'>LOGIN</h2>
@@ -53,27 +53,24 @@ const Login = () => {
             </div>
             <div className="divider">OR</div>
             <div>
-                <form className="card-body" onSubmit={handleSubmit}>
+                <form className="card-body dark:text-gray-100" onSubmit={handleSubmit}>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text dark:text-gray-100">Email</span>
                         </label>
-                        <input onChange={handleEmailChange} type="email" name='email' placeholder="email" className="input input-bordered" required />
+                        <input onChange={handleEmailChange} type="email" name='email' placeholder="email" className="input input-bordered dark:text-gray-900" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text dark:text-gray-100">Password</span>
                         </label>
-                        <input type="password" name='password' placeholder="password" className="input input-bordered" required />
-                        <label className="label">
-                            <Link to={`/forgot-password?email=${email}`} className="label-text-alt link link-hover">Forgot password?</Link>
-                        </label>
+                        <input type="password" name='password' placeholder="password" className="input input-bordered dark:text-gray-900" required />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn">Login</button>
                     </div>
                 </form>
-                <p className='text-center text-gray-600'>Don't have any account? <Link to={'/register'} className='font-semibold ml-2'> Register</Link> </p>
+                <p className='text-center text-gray-600 dark:text-gray-400'>Don't have any account? <Link to={'/register'} className='font-semibold ml-2 dark:text-gray-400'> Register</Link> </p>
             </div>
         </div>
     );

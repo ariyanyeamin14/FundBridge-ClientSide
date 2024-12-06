@@ -48,22 +48,22 @@ const AddNewCampaign = () => {
     };
 
     return (
-        <div className=''>
-            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20">
-                <div className="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md">
-                    <h1 className="text-2xl font-semibold mb-6 text-gray-800">
+        <div className='add-campain'>
+            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+                <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0C1935] text-gray-900 dark:text-gray-100">
+                    <h1 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
                         Add New Campaign
                     </h1>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-8">
                         {/* Image URL */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Image/Thumbnail URL
                             </label>
                             <input
                                 type="url"
                                 name="image"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter image URL"
                                 required
                             />
@@ -71,13 +71,13 @@ const AddNewCampaign = () => {
 
                         {/* Campaign Title */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Campaign Title
                             </label>
                             <input
                                 type="text"
                                 name="title"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter campaign title"
                                 required
                             />
@@ -85,12 +85,12 @@ const AddNewCampaign = () => {
 
                         {/* Campaign Type */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Campaign Type
                             </label>
                             <select
                                 name="type"
-                                className="select select-bordered w-full"
+                                className="select select-bordered w-full dark:text-gray-900"
                                 required
                             >
                                 <option value="" disabled>
@@ -105,12 +105,12 @@ const AddNewCampaign = () => {
 
                         {/* Description */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Description
                             </label>
                             <textarea
                                 name="description"
-                                className="textarea textarea-bordered w-full"
+                                className="textarea textarea-bordered w-full dark:text-gray-900"
                                 placeholder="Enter a description"
                                 rows={4}
                                 required
@@ -119,13 +119,13 @@ const AddNewCampaign = () => {
 
                         {/* Minimum Donation Amount */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Minimum Donation Amount ($)
                             </label>
                             <input
                                 type="number"
                                 name="minDonation"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter minimum donation amount"
                                 required
                             />
@@ -133,20 +133,20 @@ const AddNewCampaign = () => {
 
                         {/* Deadline */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Deadline
                             </label>
                             <input
                                 type="date"
                                 name="deadline"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 required
                             />
                         </div>
 
                         {/* User Email (Read Only) */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 User Email
                             </label>
                             <input
@@ -154,13 +154,13 @@ const AddNewCampaign = () => {
                                 defaultValue={user?.email}
                                 name='email'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed"
+                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
                         {/* User Name (Read Only) */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 User Name
                             </label>
                             <input
@@ -168,7 +168,7 @@ const AddNewCampaign = () => {
                                 defaultValue={user?.displayName}
                                 name='name'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed"
+                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 

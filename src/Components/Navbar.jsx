@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContex } from '../Providers/AuthProvider';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
 
@@ -13,7 +14,7 @@ const Navbar = () => {
         <Link to={`/myDonations/${user?.email}`}>My Donations</Link>
     </>
     return (
-        <div className="navbar bg-base-100 h-10 md:h-14 w-[95%] lg:[w-85%] mx-auto">
+        <div className="navbar bg-base-100 h-10 md:h-14 w-[95%] lg:[w-85%] mx-auto dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +33,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow dark:bg-[#0d0f2e] text-gray-900 dark:text-gray-100 space-y-6">
                         {links}
                     </ul>
                 </div>
@@ -42,6 +43,9 @@ const Navbar = () => {
                 <ul className="menu gap-6 menu-horizontal px-1">
                     {links}
                 </ul>
+            </div>
+            <div>
+                <ThemeToggle></ThemeToggle>
             </div>
             <div className="navbar-end space-x-5">
                 {

@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.add-campain label.block.text-sm.font-medium.text-gray-700.dark\:text-gray-100 {
+  margin-bottom: 20px;
+}
 body{
   font-family: "Oswald", sans-serif;
   overflow-y: scroll;

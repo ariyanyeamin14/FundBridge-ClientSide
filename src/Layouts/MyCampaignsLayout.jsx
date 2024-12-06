@@ -39,7 +39,7 @@ const MyCampaignsLayout = () => {
     }
     return (
         <div>
-            <div className="overflow-x-auto w-[85%] mx-auto my-20">
+            <div className="min-h-screen overflow-x-auto w-[85%] mx-auto my-20 h-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
                 <h2 className="card-title text-3xl lg:text-5xl my-14">
                     My Campaigns
                 </h2>

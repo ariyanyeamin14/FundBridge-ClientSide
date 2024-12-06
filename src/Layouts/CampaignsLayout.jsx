@@ -12,7 +12,7 @@ const CampaignsLayout = () => {
     }
 
     return (
-        <div className='w-[85%] mx-auto my-20'>
+        <div className='w-[85%] mx-auto my-20 min-h-screen'>
             <div className='flex justify-between items-center'>
                 <h2 className="card-title text-3xl lg:text-5xl my-14">
                     All Campaigns
