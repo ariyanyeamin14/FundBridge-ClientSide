@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const CampaignsLayout = () => {
-    const campaigns = useLoaderData()
+    const loadedCampaigns = useLoaderData()
+    const [campaigns, setCampaigns] = useState(loadedCampaigns)
+
+    const handleSort = () => {
+        fetch("http://localhost:5000/campaigns/sorted")
+        .then(res => res.json())
+        .then(data => setCampaigns(data))   
+    }
 
     return (
-        <div>
-            <div className="overflow-x-auto w-[85%] mx-auto my-20">
+        <div className='w-[85%] mx-auto my-20'>
+            <div className='flex justify-between items-center'>
                 <h2 className="card-title text-3xl lg:text-5xl my-14">
                     All Campaigns
                 </h2>
+                <button onClick={() => handleSort()} className='btn btn-primary'>Sort by MinDonation</button>
+            </div>
+            <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -29,8 +39,10 @@ const CampaignsLayout = () => {
                                 <td>{campaign.type}</td>
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
-                                <td>
-                                    <Link to={`/campaign/${campaign._id}`} className="btn btn-primary">See More</Link>
+                                <td className='text-right'>
+                                    <div className='flex justify-end'>
+                                        <Link to={`/campaign/${campaign._id}`} className="btn btn-primary btn-sm md:btn-md">See More</Link>
+                                    </div>
                                 </td>
                             </tr>)
                         }

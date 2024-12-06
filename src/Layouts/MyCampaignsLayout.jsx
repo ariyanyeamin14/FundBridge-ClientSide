@@ -62,9 +62,9 @@ const MyCampaignsLayout = () => {
                                 <td>{campaign.type}</td>
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
-                                <td className='space-x-5'>
-                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary">Update</Link>
-                                    <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary">Delete</button>
+                                <td className='space-x-5 flex flex-row'>
+                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary btn-sm md:btn-md">Update</Link>
+                                    <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary btn-sm md:btn-md">Delete</button>
                                 </td>
                             </tr>)
                         }

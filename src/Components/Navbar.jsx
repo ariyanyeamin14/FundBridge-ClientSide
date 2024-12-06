@@ -57,7 +57,7 @@ const Navbar = () => {
                                     {user.displayName}
                                 </h2>
                             </div>
-                            <button onClick={signoutUser} className='text-base bg-[#FFA415] ml-2 md:ml-4 px-3 md:px-5 py-2 md:py-3 rounded-xl font-medium'>Logout</button>
+                            <button onClick={signoutUser} className='btn btn-primary btn-sm md:btn-md'>Logout</button>
                         </> :
                         <>
                             <Link to={'/login'}>Log in</Link>

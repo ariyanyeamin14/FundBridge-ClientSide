@@ -4,35 +4,46 @@ import { AuthContex } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const CampaignDetails = () => {
-    const {user} = useContext(AuthContex)
+    const { user } = useContext(AuthContex)
     const campaign = useLoaderData()
     const { _id, title, image, type, description, minDonation, deadline, name, email } = campaign
 
     const handleDonate = () => {
         const donatorName = user.displayName
         const donatorEmail = user.email
-        const NewDonations = {title, image, type, description, minDonation, deadline, name, email, donatorName, donatorEmail}
+        const NewDonations = { title, image, type, description, minDonation, deadline, name, email, donatorName, donatorEmail }
+        const currentDate = new Date();
+        const deadlineDate = new Date(deadline)
 
         // send data to the server
-        fetch('http://localhost:5000/donations', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(NewDonations)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.acknowledged) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'Your donations added successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Done'
-                    })
-                }
+        if (deadlineDate < currentDate) {
+            Swal.fire({
+                icon: "error",
+                title: "Campaign Expired",
+                text: "The deadline for this campaign has passed. You cannot donate to this campaign anymore.",
+            });
+        }
+        else {
+            fetch('http://localhost:5000/donations', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(NewDonations)
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.acknowledged) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Your donations added successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Done'
+                        })
+                    }
+                })
+        }
     }
     return (
         <div>
