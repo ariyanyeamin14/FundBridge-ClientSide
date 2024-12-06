@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContex } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import CustomAnimation from '../Components/CustomAnimation';
 
 const CampaignDetails = () => {
     const { user } = useContext(AuthContex)
@@ -46,7 +47,7 @@ const CampaignDetails = () => {
         }
     }
     return (
-        <div>
+        <CustomAnimation>
             <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto my-20">
                 <figure className="">
                     <img src={image}
@@ -68,7 +69,7 @@ const CampaignDetails = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </CustomAnimation>
     );
 };
 

@@ -10,14 +10,14 @@ import HomeLayout from './Layouts/HomeLayout';
 import AddCampaignsLayout from './Layouts/AddCampaignsLayout';
 import MyCampaignsLayout from './Layouts/MyCampaignsLayout';
 import MyDonationsLayout from './Layouts/MyDonationsLayout';
-import LoginLayout from './Layouts/LoginLayout';
-import RegisterLayout from './Layouts/RegisterLayout';
 import AuthProvider from './Providers/AuthProvider';
 import PrivateRoute from './Layouts/PrivateRoute';
 import ErrorPage from './Layouts/ErrorPage';
 import CampaignDetails from './Layouts/CampaignDetails';
 import MainLayout from './MainLayout';
 import UpdateCampaign from './Layouts/UpdateCampaign';
+import Login from './Components/Login';
+import Register from './Components/Register';
 
 const router = createBrowserRouter([
   {
@@ -56,11 +56,11 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <LoginLayout></LoginLayout>
+        element: <Login></Login>
       },
       {
         path: "register",
-        element: <RegisterLayout></RegisterLayout>
+        element: <Register></Register>
       },
       {
         path: "campaign/:id",

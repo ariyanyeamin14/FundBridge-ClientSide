@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
-import Navbar from '../Components/Navbar';
 import { AuthContex } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { Typewriter } from 'react-simple-typewriter';
 
 const AddNewCampaign = () => {
-    const {user} = useContext(AuthContex)
-    console.log(user?.email)
+    const { user } = useContext(AuthContex)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -22,10 +21,10 @@ const AddNewCampaign = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
 
-        const newCampaign = {title, image, type, description, minDonation, deadline, name, email}
+        const newCampaign = { title, image, type, description, minDonation, deadline, name, email }
 
-         // send data to the server
-         fetch('http://localhost:5000/campaigns', {
+        // send data to the server
+        fetch('http://localhost:5000/campaigns', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +33,6 @@ const AddNewCampaign = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.acknowledged) {
                     Swal.fire({
                         title: 'Success!',
@@ -51,9 +49,17 @@ const AddNewCampaign = () => {
         <div className='add-campain'>
             <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
                 <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0C1935] text-gray-900 dark:text-gray-100">
-                    <h1 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
-                        Add New Campaign
-                    </h1>
+                    <h2 className="card-title text-3xl lg:text-5xl my-8 md:my-14">
+                            <Typewriter
+                                words={['Add New Campaign','Add New Campaign']}
+                                loop={5}
+                                cursor
+                                cursorStyle='|'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                    </h2>
                     <form onSubmit={handleSubmit} className="space-y-8">
                         {/* Image URL */}
                         <div>
@@ -173,7 +179,7 @@ const AddNewCampaign = () => {
                         </div>
 
                         {/* Submit Button */}
-                        <div className="mt-4">
+                        <div className="pt-8">
                             <button
                                 type="submit"
                                 className="btn btn-primary w-full flex items-center justify-center"

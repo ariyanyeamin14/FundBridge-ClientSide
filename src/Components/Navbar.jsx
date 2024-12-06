@@ -44,10 +44,10 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
+            <div className="navbar-end space-x-5">
             <div>
                 <ThemeToggle></ThemeToggle>
             </div>
-            <div className="navbar-end space-x-5">
                 {
                     user ?
                         <>
@@ -57,7 +57,7 @@ const Navbar = () => {
                                     src={`${user.photoURL}`}
                                     alt=""
                                 />
-                                <h2 className="absolute inset-0 hidden group-hover:flex justify-center items-center text-black">
+                                <h2 className="absolute inset-0 hidden group-hover:flex justify-center items-center text-black dark:text-white">
                                     {user.displayName}
                                 </h2>
                             </div>

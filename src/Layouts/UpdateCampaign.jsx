@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 import Swal from 'sweetalert2';
 
 const UpdateCampaign = () => {
@@ -31,37 +32,45 @@ const UpdateCampaign = () => {
             },
             body: JSON.stringify(updatedCampaign)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if (data.modifiedCount > 0) {
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Campaign updated successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Campaign updated successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
     };
     return (
-        <div className=''>
-            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20">
-                <div className="w-full max-w-3xl p-6 bg-white rounded-lg shadow-md">
-                    <h1 className="text-2xl font-semibold mb-6 text-gray-800">
-                        Update Campaign
-                    </h1>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+        <div className='add-campain'>
+            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+                <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0C1935] text-gray-900 dark:text-gray-100">
+                    <h2 className="card-title text-3xl lg:text-5xl my-8 md:my-14">
+                        <Typewriter
+                            words={['Update Campaign', 'Update Campaign']}
+                            loop={5}
+                            cursor
+                            cursorStyle='|'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />           
+                    </h2>
+                    <form onSubmit={handleSubmit} className="space-y-8">
                         {/* Image URL */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Image/Thumbnail URL
                             </label>
                             <input
                                 type="url"
                                 name="image"
                                 defaultValue={image}
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter image URL"
                                 required
                             />
@@ -69,14 +78,14 @@ const UpdateCampaign = () => {
 
                         {/* Campaign Title */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Campaign Title
                             </label>
                             <input
                                 type="text"
                                 name="title"
                                 defaultValue={title}
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter campaign title"
                                 required
                             />
@@ -84,14 +93,14 @@ const UpdateCampaign = () => {
 
                         {/* Campaign Type */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Campaign Type
                             </label>
                             <select
                                 name="type"
-                                className="select select-bordered w-full"
-                                required
                                 defaultValue={type}
+                                className="select select-bordered w-full dark:text-gray-900"
+                                required
                             >
                                 <option value="" disabled>
                                     Select type
@@ -105,13 +114,13 @@ const UpdateCampaign = () => {
 
                         {/* Description */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Description
                             </label>
                             <textarea
-                                defaultValue={description}
                                 name="description"
-                                className="textarea textarea-bordered w-full"
+                                defaultValue={description}
+                                className="textarea textarea-bordered w-full dark:text-gray-900"
                                 placeholder="Enter a description"
                                 rows={4}
                                 required
@@ -120,14 +129,14 @@ const UpdateCampaign = () => {
 
                         {/* Minimum Donation Amount */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Minimum Donation Amount ($)
                             </label>
                             <input
                                 type="number"
                                 name="minDonation"
                                 defaultValue={minDonation}
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter minimum donation amount"
                                 required
                             />
@@ -135,21 +144,21 @@ const UpdateCampaign = () => {
 
                         {/* Deadline */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 Deadline
                             </label>
                             <input
                                 type="date"
                                 name="deadline"
                                 defaultValue={deadline}
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:text-gray-900"
                                 required
                             />
                         </div>
 
                         {/* User Email (Read Only) */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 User Email
                             </label>
                             <input
@@ -157,13 +166,13 @@ const UpdateCampaign = () => {
                                 defaultValue={email}
                                 name='email'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed"
+                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
                         {/* User Name (Read Only) */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                                 User Name
                             </label>
                             <input
@@ -171,18 +180,18 @@ const UpdateCampaign = () => {
                                 defaultValue={name}
                                 name='name'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed"
+                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
                         {/* Submit Button */}
-                        <div className="mt-4">
+                        <div className="pt-8">
                             <button
                                 type="submit"
                                 className="btn btn-primary w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
-                                Add Campaign
+                                Update Campaign
                             </button>
                         </div>
                     </form>
