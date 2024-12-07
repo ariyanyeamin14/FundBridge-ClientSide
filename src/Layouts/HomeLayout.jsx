@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
 import Banner from '../Components/Banner';
 import RunningCampaign from '../Components/RunningCampaign';
 import OurImpact from '../Components/OurImpact';
+import WhatPeopleSay from '../Components/WhatPeopleSay';
 
 const HomeLayout = () => {
     return (
@@ -12,6 +12,9 @@ const HomeLayout = () => {
             </section>
             <section>
                 <RunningCampaign></RunningCampaign>
+            </section>
+            <section>
+                <WhatPeopleSay></WhatPeopleSay>
             </section>
             <section>
                 <OurImpact></OurImpact>

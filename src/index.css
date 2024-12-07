@@ -11,4 +11,10 @@ body{
   font-family: "Oswald", sans-serif;
   overflow-y: scroll;
 }
+#what-people-say-bg{
+  background: url('../src/assets/what-people-say.jpg');
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+}
 
