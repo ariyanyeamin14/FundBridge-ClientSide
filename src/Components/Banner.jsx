@@ -47,18 +47,6 @@ const Banner = () => {
                         <div id='gradient-bg' className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
                             <div className='w-[80%] mx-auto space-y-8'>
                                 <h1 id='transperant-text-banner' className='text-5xl md:text-6xl xl:text-8xl text-white font-bold leading-relaxed'>Spread Warmth This Winter</h1>
-                                <span style={{ color: 'red', fontWeight: 'bold' }}>
-                                    {/* Style will be inherited from the parent element */}
-                                    <Typewriter
-                                        words={['Eat', 'Sleep', 'Code', 'Repeat!']}
-                                        loop={5}
-                                        cursor
-                                        cursorStyle='|'
-                                        typeSpeed={70}
-                                        deleteSpeed={50}
-                                        delaySpeed={1000}
-                                    />
-                                </span>
                                 <p className='text-white w-[90%] md:w-[60%] text-lg font-medium '>A simple act of kindness can warm a heart this winter. Your donation of coats, hats, and warm clothing can transform a cold night into a comforting one for someone in need. Let’s show that together, our community cares.</p>
                             </div>
                         </div>
