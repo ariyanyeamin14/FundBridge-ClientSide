@@ -7,7 +7,7 @@ const CampaignsLayout = () => {
     const [campaigns, setCampaigns] = useState(loadedCampaigns)
 
     const handleSort = () => {
-        fetch("http://localhost:5000/campaigns/sorted")
+        fetch("https://fund-bridge-server.vercel.app/campaigns/sorted")
             .then(res => res.json())
             .then(data => setCampaigns(data))
     }
@@ -26,7 +26,7 @@ const CampaignsLayout = () => {
                         delaySpeed={1000}
                     />
                 </h2>
-                <button onClick={() => handleSort()} className='btn btn-primary'>Sort by MinDonation</button>
+                <button onClick={() => handleSort()} className='btn  bg-[#1d22b8] text-white  btn-primary'>Sort by MinDonation</button>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
@@ -34,10 +34,10 @@ const CampaignsLayout = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th className='dark:text-gray-400'>Title</th>
-                            <th className='dark:text-gray-400'>Type</th>
-                            <th className='dark:text-gray-400'>Min donation</th>
-                            <td className='dark:text-gray-400'>Deadline</td>
+                            <th className='text-gray-700 dark:text-gray-400'>Title</th>
+                            <th className='text-gray-700 dark:text-gray-400'>Type</th>
+                            <th className='text-gray-700 dark:text-gray-400'>Min donation</th>
+                            <td className='text-gray-700 dark:text-gray-400'>Deadline</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,7 +50,7 @@ const CampaignsLayout = () => {
                                 <td>{campaign.deadline}</td>
                                 <td className='text-right'>
                                     <div className='flex justify-end'>
-                                        <Link to={`/campaign/${campaign._id}`} className="btn btn-primary btn-sm md:btn-md">See More</Link>
+                                        <Link to={`/campaign/${campaign._id}`} className="btn  bg-[#1d22b8] text-white btn-primary btn-sm md:btn-md">See More</Link>
                                     </div>
                                 </td>
                             </tr>)

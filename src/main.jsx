@@ -27,12 +27,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        loader: () => fetch('http://localhost:5000/campaigns6')
+        loader: () => fetch('https://fund-bridge-server.vercel.app/campaigns6')
       },
       {
         path: "campaigns",
         element: <CampaignsLayout></CampaignsLayout>,
-        loader: () => fetch('http://localhost:5000/campaigns')
+        loader: () => fetch('https://fund-bridge-server.vercel.app/campaigns')
       },
       {
         path: "addCampaign",
@@ -45,14 +45,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyCampaignsLayout></MyCampaignsLayout>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/campaigns/${params.email}`)
+        loader: ({ params }) => fetch(`https://fund-bridge-server.vercel.app/campaigns/${params.email}`)
       },
       {
         path: "myDonations/:email",
         element: <PrivateRoute>
           <MyDonationsLayout></MyDonationsLayout>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/donations/${params.email}`)
+        loader: ({params}) => fetch(`https://fund-bridge-server.vercel.app/donations/${params.email}`)
       },
       {
         path: "login",
@@ -67,14 +67,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <CampaignDetails></CampaignDetails>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/campaign/${params.id}`)
+        loader: ({ params }) => fetch(`https://fund-bridge-server.vercel.app/campaign/${params.id}`)
       },
       {
         path: "updateCampaign/:id",
         element: <PrivateRoute>
           <UpdateCampaign></UpdateCampaign>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/campaign/${params.id}`)
+        loader: ({params}) => fetch(`https://fund-bridge-server.vercel.app/campaign/${params.id}`)
       }
     ]
   },

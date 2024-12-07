@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { AuthContex } from '../Providers/AuthProvider';
-import Navbar from '../Components/Navbar';
 import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({children}) => {
@@ -10,7 +9,7 @@ const PrivateRoute = ({children}) => {
         return (
             <div>
                 <div className='flex justify-center items-center min-h-screen'>
-                    <span className="loading w-[150px] text-center loading-spinner text-blue-700"></span>
+                    <span className="loading w-[150px] text-center loading-spinner text-[#1d22b8]"></span>
                 </div>
             </div>
         )

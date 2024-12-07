@@ -26,7 +26,7 @@ const CampaignDetails = () => {
             });
         }
         else {
-            fetch('http://localhost:5000/donations', {
+            fetch('https://fund-bridge-server.vercel.app/donations', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -75,7 +75,7 @@ const CampaignDetails = () => {
                         <p className='text-lg lg:text-xl'>Campain Creator: {name}</p>
                         <p className='text-lg lg:text-xl'>Contact: {email}</p>
                         <div className="card-actions">
-                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn btn-primary btn-lg">Donate</button>
+                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn  bg-[#1d22b8] text-white  btn-primary btn-lg">Donate</button>
                         </div>
                     </div>
                 </div>

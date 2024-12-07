@@ -29,7 +29,7 @@ const Banner = () => {
         <div className="relative w-full">
             <Swiper
                 modules={[Navigation, Autoplay]}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{ delay: 4000, disableOnInteraction: false }}
                 navigation={{
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -47,7 +47,16 @@ const Banner = () => {
                         <div id='gradient-bg' className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
                             <div className='w-[80%] mx-auto space-y-8'>
                                 <h1 id='transperant-text-banner' className='text-5xl md:text-6xl xl:text-8xl text-white font-bold leading-relaxed'>
-                                    {slide.title }
+                                    
+                                    <Typewriter
+                                        words={[`${slide.title}`, `${slide.title}`]}
+                                        loop={30}
+                                        cursor
+                                        cursorStyle='|'
+                                        typeSpeed={50}
+                                        deleteSpeed={0}
+                                        delaySpeed={1000}
+                                    />
                                 </h1>
                                 <p className='text-white w-[90%] md:w-[60%] text-lg font-medium '>
                                     {slide.description}

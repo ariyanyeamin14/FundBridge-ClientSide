@@ -7,7 +7,7 @@ const CampaignCard = ({ campaign }) => {
 
     return (
         <CustomAnimation>
-            <div className="card bg-base-100 shadow-xl dark:shadow-dark dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+            <div className="card bg-gray-100 shadow-xl dark:shadow-dark dark:bg-gray-900 text-gray-900 dark:text-gray-100">
                 <figure>
                     <img className='h-[250px] lg:h-[280px] xl:h-[350px]' src={image} />
                 </figure>
@@ -16,7 +16,7 @@ const CampaignCard = ({ campaign }) => {
                     <p className='font-normal'>{description}</p>
                     <p className='text-lg'>Deadline: {deadline}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/campaign/${_id}`} className="btn btn-primary">See More</Link>
+                        <Link to={`/campaign/${_id}`} className="btn bg-[#1d22b8] text-white btn-primary">See More</Link>
                     </div>
                 </div>
             </div>

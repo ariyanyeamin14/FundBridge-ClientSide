@@ -25,7 +25,7 @@ const UpdateCampaign = () => {
         const updatedCampaign = { title, image, type, description, minDonation, deadline, name, email }
 
         // send data to the server
-        fetch(`http://localhost:5000/campaign/${_id}`, {
+        fetch(`https://fund-bridge-server.vercel.app/campaign/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -70,7 +70,7 @@ const UpdateCampaign = () => {
                                 type="url"
                                 name="image"
                                 defaultValue={image}
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter image URL"
                                 required
                             />
@@ -85,7 +85,7 @@ const UpdateCampaign = () => {
                                 type="text"
                                 name="title"
                                 defaultValue={title}
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter campaign title"
                                 required
                             />
@@ -99,7 +99,7 @@ const UpdateCampaign = () => {
                             <select
                                 name="type"
                                 defaultValue={type}
-                                className="select select-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 select select-bordered w-full dark:text-gray-900"
                                 required
                             >
                                 <option value="" disabled>
@@ -120,7 +120,7 @@ const UpdateCampaign = () => {
                             <textarea
                                 name="description"
                                 defaultValue={description}
-                                className="textarea textarea-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 textarea textarea-bordered w-full dark:text-gray-900"
                                 placeholder="Enter a description"
                                 rows={4}
                                 required
@@ -136,7 +136,7 @@ const UpdateCampaign = () => {
                                 type="number"
                                 name="minDonation"
                                 defaultValue={minDonation}
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter minimum donation amount"
                                 required
                             />
@@ -151,7 +151,7 @@ const UpdateCampaign = () => {
                                 type="date"
                                 name="deadline"
                                 defaultValue={deadline}
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 required
                             />
                         </div>
@@ -166,7 +166,7 @@ const UpdateCampaign = () => {
                                 defaultValue={email}
                                 name='email'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
+                                className="input input-bordered w-full bg-gray-50 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
@@ -180,7 +180,7 @@ const UpdateCampaign = () => {
                                 defaultValue={name}
                                 name='name'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
+                                className="input input-bordered w-full bg-gray-50 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
@@ -188,7 +188,7 @@ const UpdateCampaign = () => {
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="btn btn-primary w-full flex items-center justify-center"
+                                className="btn  bg-[#1d22b8] text-white  btn-primary w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
                                 Update Campaign

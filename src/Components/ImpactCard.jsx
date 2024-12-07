@@ -10,7 +10,7 @@ const ImpactCard = ({ number, title, description }) => {
                 <div className=''>
                     {
                         counterOn &&
-                        <h2 className='text-[#000AFF] dark:text-[#ab58ff] text-5xl font-semibold mb-8'>
+                        <h2 className='text-[#1d22b8]  dark:text-[#ab58ff] text-5xl font-semibold mb-8'>
                             <CountUp end={number} duration={3} />+
                         </h2>
                     }

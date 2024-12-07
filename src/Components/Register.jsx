@@ -110,25 +110,25 @@ const Register = () => {
                             <label className="label ">
                                 <span className="label-text dark:text-gray-100">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="name" className="input input-bordered dark:text-gray-900" required />
+                            <input type="text" name='name' placeholder="name" className="input bg-gray-50 input-bordered dark:text-gray-900" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text dark:text-gray-100">Photo URL</span>
                             </label>
-                            <input type="text" name='photo' placeholder="photo" className="input input-bordered dark:text-gray-900" required />
+                            <input type="text" name='photo' placeholder="photo" className="bg-gray-50 input input-bordered dark:text-gray-900" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text dark:text-gray-100">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered dark:text-gray-900" required />
+                            <input type="email" name='email' placeholder="email" className="bg-gray-50 input input-bordered dark:text-gray-900" required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text dark:text-gray-100">Password</span>
                             </label>
-                            <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered dark:text-gray-900" required />
+                            <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="bg-gray-50 input input-bordered dark:text-gray-900" required />
                             <button
                                 type="button"
                                 onClick={togglePasswordVisibility}
@@ -137,7 +137,7 @@ const Register = () => {
                             </button>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn">Register</button>
+                            <button className="btn  bg-[#1d22b8] text-white ">Register</button>
                         </div>
                     </form>
                     <p className='text-center text-gray-600 dark:text-gray-400'>Already have an account? <Link to={'/login'} className='font-semibold ml-2 dark:text-gray-400'> Login</Link> </p>

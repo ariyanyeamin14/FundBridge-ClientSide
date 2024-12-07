@@ -24,7 +24,7 @@ const AddNewCampaign = () => {
         const newCampaign = { title, image, type, description, minDonation, deadline, name, email }
 
         // send data to the server
-        fetch('http://localhost:5000/campaigns', {
+        fetch('https://fund-bridge-server.vercel.app/campaigns', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -69,7 +69,7 @@ const AddNewCampaign = () => {
                             <input
                                 type="url"
                                 name="image"
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="input bg-gray-50 input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter image URL"
                                 required
                             />
@@ -83,7 +83,7 @@ const AddNewCampaign = () => {
                             <input
                                 type="text"
                                 name="title"
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="input bg-gray-50 input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter campaign title"
                                 required
                             />
@@ -96,7 +96,7 @@ const AddNewCampaign = () => {
                             </label>
                             <select
                                 name="type"
-                                className="select select-bordered w-full dark:text-gray-900"
+                                className=" bg-gray-50 select select-bordered w-full dark:text-gray-900"
                                 required
                             >
                                 <option value="" disabled>
@@ -116,7 +116,7 @@ const AddNewCampaign = () => {
                             </label>
                             <textarea
                                 name="description"
-                                className="textarea textarea-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 textarea textarea-bordered w-full dark:text-gray-900"
                                 placeholder="Enter a description"
                                 rows={4}
                                 required
@@ -131,7 +131,7 @@ const AddNewCampaign = () => {
                             <input
                                 type="number"
                                 name="minDonation"
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 placeholder="Enter minimum donation amount"
                                 required
                             />
@@ -145,7 +145,7 @@ const AddNewCampaign = () => {
                             <input
                                 type="date"
                                 name="deadline"
-                                className="input input-bordered w-full dark:text-gray-900"
+                                className="bg-gray-50 input input-bordered w-full dark:text-gray-900"
                                 required
                             />
                         </div>
@@ -160,7 +160,7 @@ const AddNewCampaign = () => {
                                 defaultValue={user?.email}
                                 name='email'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
+                                className="input input-bordered w-full bg-gray-50 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
@@ -174,7 +174,7 @@ const AddNewCampaign = () => {
                                 defaultValue={user?.displayName}
                                 name='name'
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 cursor-not-allowed dark:text-gray-900"
+                                className="input input-bordered w-full bg-gray-50 cursor-not-allowed dark:text-gray-900"
                             />
                         </div>
 
@@ -182,7 +182,7 @@ const AddNewCampaign = () => {
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="btn btn-primary w-full flex items-center justify-center"
+                                className="btn  bg-[#1d22b8] text-white  btn-primary w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
                                 Add Campaign

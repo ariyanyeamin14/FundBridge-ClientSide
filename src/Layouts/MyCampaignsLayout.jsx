@@ -18,7 +18,7 @@ const MyCampaignsLayout = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/campaigns/${id}`, {
+                fetch(`https://fund-bridge-server.vercel.app/campaigns/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -56,10 +56,10 @@ const MyCampaignsLayout = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th className='dark:text-gray-400'>Title</th>
-                            <th className='dark:text-gray-400'>Type</th>
-                            <th className='dark:text-gray-400'>Min donation</th>
-                            <td className='dark:text-gray-400'>Deadline</td>
+                            <th className='text-gray-700 dark:text-gray-400'>Title</th>
+                            <th className='text-gray-700 dark:text-gray-400'>Type</th>
+                            <th className='text-gray-700 dark:text-gray-400'>Min donation</th>
+                            <td className='text-gray-700 dark:text-gray-400'>Deadline</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,8 +71,8 @@ const MyCampaignsLayout = () => {
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
                                 <td className='space-x-5 flex flex-row'>
-                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary btn-sm md:btn-md">Update</Link>
-                                    <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary btn-sm md:btn-md">Delete</button>
+                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary  bg-[#1d22b8] text-white  btn-sm md:btn-md">Update</Link>
+                                    <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary  bg-[#1d22b8] text-white  btn-sm md:btn-md">Delete</button>
                                 </td>
                             </tr>)
                         }
