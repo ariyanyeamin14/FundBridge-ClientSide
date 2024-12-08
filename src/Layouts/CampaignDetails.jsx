@@ -4,6 +4,9 @@ import { AuthContex } from '../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 import CustomAnimation from '../Components/CustomAnimation';
 import { Typewriter } from 'react-simple-typewriter';
+import { FaCalendarTimes, FaDonate, FaHandPointRight } from 'react-icons/fa';
+import { IoIosCreate } from 'react-icons/io';
+import { MdContactMail } from 'react-icons/md';
 
 const CampaignDetails = () => {
     const { user } = useContext(AuthContex)
@@ -35,7 +38,7 @@ const CampaignDetails = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                     (data)
                     if (data.acknowledged) {
                         Swal.fire({
                             title: 'Success!',
@@ -49,7 +52,7 @@ const CampaignDetails = () => {
     }
     return (
         <CustomAnimation>
-            <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto my-20">
+            <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto my-20 ">
                 <figure className="">
                     <img src={image}
                         alt=""
@@ -68,14 +71,17 @@ const CampaignDetails = () => {
                                 delaySpeed={2000}
                             />
                         </h2>
-                        <p className='text-lg lg:text-xl'>{description}</p>
-                        <p className='text-lg lg:text-xl'>{type}</p>
-                        <p className='text-lg lg:text-xl'>Minimum Ammount of Donation: {minDonation} </p>
-                        <p className='text-lg lg:text-xl'>Deadline: {deadline}</p>
-                        <p className='text-lg lg:text-xl'>Campain Creator: {name}</p>
-                        <p className='text-lg lg:text-xl'>Contact: {email}</p>
+                        <p className='md:text-lg lg:text-xl'>{description}</p>
+                        <p className='md:text-lg lg:text-xl'> <FaHandPointRight className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4' />{type}</p>
+                        <p className='md:text-lg lg:text-xl'><FaDonate  className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'  />Minimum Ammount of Donation: {minDonation} </p>
+                        <p className='md:text-lg lg:text-xl'><FaCalendarTimes className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'   />
+                        Deadline: {deadline}</p>
+                        <p className='md:text-lg lg:text-xl'> <IoIosCreate className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'/>
+                        Campain Creator: {name}</p>
+                        <p className='md:text-lg lg:text-xl'> <MdContactMail className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'/>
+                        Contact: {email}</p>
                         <div className="card-actions">
-                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn  bg-[#1d22b8] text-white  btn-primary btn-lg">Donate</button>
+                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none outline-none text-white  btn-primary md:btn-lg">Donate</button>
                         </div>
                     </div>
                 </div>

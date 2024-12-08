@@ -10,12 +10,12 @@ const ImpactCard = ({ number, title, description }) => {
                 <div className=''>
                     {
                         counterOn &&
-                        <h2 className='text-[#1d22b8]  dark:text-[#ab58ff] text-5xl font-semibold mb-8'>
+                        <h2 className='text-[#1d22b8]  dark:text-[#f0f647] text-4xl md:text-5xl font-semibold mb-8'>
                             <CountUp end={number} duration={3} />+
                         </h2>
                     }
                 </div>
-                <h2 className='text-gray-900 dark:text-gray-100 text-4xl font-semibold '> {title} </h2>
+                <h2 className='text-gray-900 dark:text-gray-100 text-3xl md:text-4xl font-semibold '> {title} </h2>
                 <p className=' dark:text-gray-300 text-gray-700'>{description}</p>
             </div>
         </ScrollTrigger>

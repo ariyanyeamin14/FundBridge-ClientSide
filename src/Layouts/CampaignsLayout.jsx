@@ -26,7 +26,7 @@ const CampaignsLayout = () => {
                         delaySpeed={1000}
                     />
                 </h2>
-                <button onClick={() => handleSort()} className='btn  bg-[#1d22b8] text-white  btn-primary'>Sort by MinDonation</button>
+                <button onClick={() => handleSort()} className='btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-primary'>Sort by MinDonation</button>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
@@ -50,7 +50,7 @@ const CampaignsLayout = () => {
                                 <td>{campaign.deadline}</td>
                                 <td className='text-right'>
                                     <div className='flex justify-end'>
-                                        <Link to={`/campaign/${campaign._id}`} className="btn  bg-[#1d22b8] text-white btn-primary btn-sm md:btn-md">See More</Link>
+                                        <Link to={`/campaign/${campaign._id}`} className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white btn-primary btn-sm md:btn-md">See More</Link>
                                     </div>
                                 </td>
                             </tr>)

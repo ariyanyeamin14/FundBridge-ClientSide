@@ -34,7 +34,7 @@ const UpdateCampaign = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                 (data)
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
@@ -188,7 +188,7 @@ const UpdateCampaign = () => {
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="btn  bg-[#1d22b8] text-white  btn-primary w-full flex items-center justify-center"
+                                className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-primary w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
                                 Update Campaign

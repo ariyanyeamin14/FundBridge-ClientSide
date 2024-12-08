@@ -102,10 +102,10 @@ const Register = () => {
                     <div className="btn btn-ghost nav-logo text-xl lg:text-2xl font-extrabold  mb-10"> <p>FundBridge</p> </div>
                     <h2 className='text-4xl font-semibold'>REGISTER</h2>
                 </div>
-                <div className='bg-gray-200 py-3 mx-8 my-10 text-center rounded-xl cursor-pointer text-gray-600' onClick={handleGoogleSignin}> <FcGoogle size={40} className='inline-block' /> Signin With Google</div>
+                <div className='bg-gray-200  py-1 md:py-3 mx-1 md:mx-8 my-10 text-center rounded-xl cursor-pointer text-gray-600' onClick={handleGoogleSignin}> <FcGoogle size={40} className='inline-block' /> Signin With Google</div>
                 <div className="divider">OR</div>
                 <div>
-                    <form className="card-body" onSubmit={handleSubmit}>
+                    <form className="card-body px-1 md:px-6" onSubmit={handleSubmit}>
                         <div className="form-control">
                             <label className="label ">
                                 <span className="label-text dark:text-gray-100">Name</span>
@@ -137,7 +137,7 @@ const Register = () => {
                             </button>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn  bg-[#1d22b8] text-white ">Register</button>
+                            <button className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white ">Register</button>
                         </div>
                     </form>
                     <p className='text-center text-gray-600 dark:text-gray-400'>Already have an account? <Link to={'/login'} className='font-semibold ml-2 dark:text-gray-400'> Login</Link> </p>

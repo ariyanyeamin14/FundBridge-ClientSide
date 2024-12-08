@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to={`/myDonations/${user?.email}`}>My Donations</Link>
     </>
     const handleMobileMenu = () => {
-        console.log(active)
+         (active)
         return setActive(!active)
 
     }
@@ -41,7 +41,7 @@ const Navbar = () => {
                                 <div className='flex items-center gap-3 md:gap-6'>
                                     <div className="relative group w-10 md:w-14">
                                         <img
-                                            className="w-10 md:w-14 rounded-full group-hover:hidden"
+                                            className="w-10 border-2 border-[#1d22b8] dark:border-[#f0f647] md:w-14 rounded-full group-hover:hidden"
                                             src={`${user.photoURL}`}
                                             alt=""
                                         />
@@ -49,7 +49,7 @@ const Navbar = () => {
                                             {user.displayName}
                                         </h2>
                                     </div>
-                                    <button onClick={signoutUser} className='btn  bg-[#1d22b8] text-white   btn-primary btn-sm md:btn-md'>Logout</button>
+                                    <button onClick={signoutUser} className='btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none outline-none text-white  btn-primary btn-sm md:btn-md'>Logout</button>
                                 </div> :
                                 <div className='flex gap-4 items-center'>
                                     <Link to={'/login'}>Log in</Link>
@@ -58,11 +58,11 @@ const Navbar = () => {
                         }
                     </div>
                     <div>
-                        <LuSquareMenu color='#3037fe' onClick={() => handleMobileMenu()} size={30} />
+                        <LuSquareMenu color='' className='text-[#1d22b8] dark:text-[#f0f647] lg:hidden' onClick={() => handleMobileMenu()} size={30} />
                     </div>
                 </div>
             </div>
-            <div onClick={() => setActive(!active)} className={` bg-[#1d22b8] text-white  absolute grid right-2 z-10  p-6 gap-5 rounded-xl duration-1000   ${active ? "top-14 " : "-top-80"}`}>
+            <div onClick={() => setActive(!active)} className={` bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black text-white  absolute grid right-2 z-10  p-6 gap-5 rounded-xl duration-1000   ${active ? "top-14 " : "-top-80"}`}>
                 {links}
             </div>
         </div>

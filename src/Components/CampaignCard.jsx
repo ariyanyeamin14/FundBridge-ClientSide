@@ -16,7 +16,7 @@ const CampaignCard = ({ campaign }) => {
                     <p className='font-normal'>{description}</p>
                     <p className='text-lg'>Deadline: {deadline}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/campaign/${_id}`} className="btn bg-[#1d22b8] text-white btn-primary">See More</Link>
+                        <Link to={`/campaign/${_id}`} className="btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white btn-primary">See More</Link>
                     </div>
                 </div>
             </div>

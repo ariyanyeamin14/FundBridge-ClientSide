@@ -15,7 +15,7 @@ const WhatPeopleSay = () => {
 
     return (
         <div id="what-people-say-bg" className="py-28 text-white">
-            <h2 className="text-5xl text-center mb-10">What people Say ?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">What people Say ?</h2>
             <div className="w-[90%] md:w-[70%] mx-auto p-6">
                 <Swiper
                     modules={[Navigation, Autoplay]} // Register the necessary modules
