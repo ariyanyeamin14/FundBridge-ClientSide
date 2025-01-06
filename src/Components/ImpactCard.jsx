@@ -6,11 +6,11 @@ const ImpactCard = ({ number, title, description }) => {
     const [counterOn, setCounterOn] = useState(false)
     return (
         <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-            <div className=' dark:bg-gray-950 text-gray-900 bg-gray-200 rounded-xl text-center p-6 md:py-10 border-2 dark:border-gray-700 border-gray-400 shadow-xl space-y-6'>
+            <div id='impact' className='section dark:bg-gray-950 text-gray-900 bg-gray-100 rounded-xl text-center p-6 md:py-10 border-2 dark:border-gray-700 border-gray-400 shadow-xl space-y-6'>
                 <div className=''>
                     {
                         counterOn &&
-                        <h2 className='text-[#1d22b8]  dark:text-[#f0f647] text-4xl md:text-5xl font-semibold mb-8'>
+                        <h2 className='text-[#ff2c64]  dark:text-[#ff2c64] text-4xl md:text-5xl font-semibold mb-8'>
                             <CountUp end={number} duration={3} />+
                         </h2>
                     }

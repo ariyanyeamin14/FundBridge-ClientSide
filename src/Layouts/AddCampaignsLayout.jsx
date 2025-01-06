@@ -55,6 +55,7 @@ const AddNewCampaign = () => {
                                 loop={5}
                                 cursor
                                 cursorStyle='|'
+                                cursorColor='#ff2c64'
                                 typeSpeed={70}
                                 deleteSpeed={50}
                                 delaySpeed={1000}
@@ -182,7 +183,7 @@ const AddNewCampaign = () => {
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-primary w-full flex items-center justify-center"
+                                className="btn bg-[#ff2c64] border-none text-white  btn-primary w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
                                 Add Campaign

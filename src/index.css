@@ -8,16 +8,45 @@
   margin-bottom: 20px;
 }
 #gradient-bg{
-  background: linear-gradient(to right, #0200479c, #08003cb4);
+  background: linear-gradient(to right, #af002f72, #af002f72);
 }
 body{
   font-family: "Oswald", sans-serif;
   overflow-y: scroll;
 }
-#what-people-say-bg{
+#testimonial{
+  /* background: linear-gradient(to right, #af002f72, #af002f72), url('../src/assets/what-people-say.jpg'); */
   background: url('../src/assets/what-people-say.jpg');
   background-repeat: no-repeat;
   background-position: center ;
   background-size: cover;
+  background-attachment: fixed;
+}
+.active{
+  /* background: #ff712a; */
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  color: #ff2c64;
+  font-weight: 500;
 }
 
+.swiper-pagination-bullet{
+  display: none !important;
+}
+
+#about-slider{
+  background-color: #ff2c64d0;
+}
+
+/* #ffd414 */
+
+#about-slider-bg{
+  
+  background-image: url('../src/assets/slider/slider-2.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
+import CampaignCard from '../Components/CampaignCard';
 
 const CampaignsLayout = () => {
     const loadedCampaigns = useLoaderData()
@@ -13,7 +14,7 @@ const CampaignsLayout = () => {
     }
 
     return (
-        <div className='w-[90%] md:w-[85%] mx-auto my-20 min-h-screen'>
+        <div className='w-[90%] md:w-[85%] mx-auto py-20 min-h-screen'>
             <div className='flex justify-between items-center'>
                 <h2 className="card-title text-3xl lg:text-5xl my-14">
                     <Typewriter
@@ -21,42 +22,18 @@ const CampaignsLayout = () => {
                         loop={10}
                         cursor
                         cursorStyle='|'
+                        cursorColor='#ff2c64'
                         typeSpeed={70}
                         deleteSpeed={50}
                         delaySpeed={1000}
                     />
                 </h2>
-                <button onClick={() => handleSort()} className='btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-primary'>Sort by MinDonation</button>
+                <button onClick={() => handleSort()} className='btn bg-[#ff2c64] border-none text-white  btn-primary'>Sort by MinDonation</button>
             </div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th className='text-gray-700 dark:text-gray-400'>Title</th>
-                            <th className='text-gray-700 dark:text-gray-400'>Type</th>
-                            <th className='text-gray-700 dark:text-gray-400'>Min donation</th>
-                            <td className='text-gray-700 dark:text-gray-400'>Deadline</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            campaigns.map((campaign, index) => <tr key={campaign._id} className="hover dark:hover:text-gray-900">
-                                <th>{index + 1}</th>
-                                <td className='lg:text-lg'>{campaign.title}</td>
-                                <td>{campaign.type}</td>
-                                <td>{campaign.minDonation} $</td>
-                                <td>{campaign.deadline}</td>
-                                <td className='text-right'>
-                                    <div className='flex justify-end'>
-                                        <Link to={`/campaign/${campaign._id}`} className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white btn-primary btn-sm md:btn-md">See More</Link>
-                                    </div>
-                                </td>
-                            </tr>)
-                        }
-                    </tbody>
-                </table>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                {
+                    campaigns.map( (campaign, index) => <CampaignCard campaign={campaign} key={index}></CampaignCard> )
+                }
             </div>
         </div>
     );

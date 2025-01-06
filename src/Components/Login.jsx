@@ -87,7 +87,7 @@ const Login = () => {
                             <input type="password" name='password' placeholder="password" className="input input-bordered bg-gray-50 dark:text-gray-900" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white ">Login</button>
+                            <button className="btn  bg-[#ff2c64] border-none text-white ">Login</button>
                         </div>
                     </form>
                     <p className='text-center text-gray-600 dark:text-gray-400'>Don't have any account? <Link to={'/register'} className='font-semibold ml-2 dark:text-gray-400'> Register</Link> </p>

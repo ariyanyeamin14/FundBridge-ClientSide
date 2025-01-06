@@ -35,7 +35,7 @@ const Banner = () => {
                     prevEl: '.swiper-button-prev',
                 }}
                 loop={true}
-                className="w-full h-screen"
+                className="w-full h-screen lg:h-[850px]"
             >
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id} className="relative w-full h-full">

@@ -52,7 +52,7 @@ const CampaignDetails = () => {
     }
     return (
         <CustomAnimation>
-            <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto my-20 ">
+            <div className="w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto py-20 ">
                 <figure className="">
                     <img src={image}
                         alt=""
@@ -63,25 +63,26 @@ const CampaignDetails = () => {
                         <h2 className="card-title text-3xl lg:text-5xl my-14">
                             <Typewriter
                                 words={[`${title}`, `${title}`]}
-                                loop={5}
+                                loop={75}
                                 cursor
                                 cursorStyle='|'
+                                cursorColor="#ff2c64"
                                 typeSpeed={70}
                                 deleteSpeed={50}
                                 delaySpeed={2000}
                             />
                         </h2>
                         <p className='md:text-lg lg:text-xl'>{description}</p>
-                        <p className='md:text-lg lg:text-xl'> <FaHandPointRight className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4' />{type}</p>
-                        <p className='md:text-lg lg:text-xl'><FaDonate  className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'  />Minimum Ammount of Donation: {minDonation} </p>
-                        <p className='md:text-lg lg:text-xl'><FaCalendarTimes className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'   />
+                        <p className='md:text-lg lg:text-xl'> <FaHandPointRight className='text-[#ff2c64] inline mr-4' />{type}</p>
+                        <p className='md:text-lg lg:text-xl'><FaDonate  className='text-[#ff2c64] inline mr-4'  />Minimum Ammount of Donation: {minDonation} </p>
+                        <p className='md:text-lg lg:text-xl'>
                         Deadline: {deadline}</p>
-                        <p className='md:text-lg lg:text-xl'> <IoIosCreate className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'/>
+                        <p className='md:text-lg lg:text-xl'> <IoIosCreate className='text-[#ff2c64] inline mr-4'/>
                         Campain Creator: {name}</p>
-                        <p className='md:text-lg lg:text-xl'> <MdContactMail className='text-[#1d22b8] dark:text-[#f0f647] inline mr-4'/>
+                        <p className='md:text-lg lg:text-xl'> <MdContactMail className='text-[#ff2c64] inline mr-4'/>
                         Contact: {email}</p>
                         <div className="card-actions">
-                            <button onClick={() => handleDonate(user.displayName, user.email)} className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none outline-none text-white  btn-primary md:btn-lg">Donate</button>
+                            <button onClick={() => handleDonate(user.displayName, user.email)} className="text-white  bg-[#ff2c64] px-8 py-3 rounded-3xl">Donate</button>
                         </div>
                     </div>
                 </div>

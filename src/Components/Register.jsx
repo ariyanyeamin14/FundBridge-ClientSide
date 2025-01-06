@@ -137,7 +137,7 @@ const Register = () => {
                             </button>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white ">Register</button>
+                            <button className="btn  bg-[#ff2c64] border-none text-white ">Register</button>
                         </div>
                     </form>
                     <p className='text-center text-gray-600 dark:text-gray-400'>Already have an account? <Link to={'/login'} className='font-semibold ml-2 dark:text-gray-400'> Login</Link> </p>

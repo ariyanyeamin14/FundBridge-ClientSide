@@ -23,9 +23,9 @@ const ThemeToggle = () => {
       className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition duration-300"
     >
       {theme === "light" ? (
-        <FaMoon className="text-gray-800 dark:text-gray-200" />
+        <FaMoon className="text-[#ff2c64] " />
       ) : (
-        <FaSun className="text-yellow-400" />
+        <FaSun className="text-[#ff2c64]" />
       )}
     </button>
   );

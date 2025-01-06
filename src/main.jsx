@@ -18,6 +18,7 @@ import MainLayout from './MainLayout';
 import UpdateCampaign from './Layouts/UpdateCampaign';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import About from './Layouts/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        loader: () => fetch('https://fund-bridge-server.vercel.app/campaigns6')
+        loader: () => fetch('https://fund-bridge-server.vercel.app/campaigns8')
       },
       {
         path: "campaigns",
@@ -64,9 +65,7 @@ const router = createBrowserRouter([
       },
       {
         path: "campaign/:id",
-        element: <PrivateRoute>
-          <CampaignDetails></CampaignDetails>
-        </PrivateRoute>,
+        element: <CampaignDetails></CampaignDetails>,
         loader: ({ params }) => fetch(`https://fund-bridge-server.vercel.app/campaign/${params.id}`)
       },
       {
@@ -75,6 +74,10 @@ const router = createBrowserRouter([
           <UpdateCampaign></UpdateCampaign>
         </PrivateRoute>,
         loader: ({params}) => fetch(`https://fund-bridge-server.vercel.app/campaign/${params.id}`)
+      },
+      {
+        path: 'about',
+        element: <About></About>
       }
     ]
   },

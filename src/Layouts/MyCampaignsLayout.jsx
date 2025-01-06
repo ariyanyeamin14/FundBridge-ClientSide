@@ -39,13 +39,14 @@ const MyCampaignsLayout = () => {
     }
     return (
         <div>
-            <div className="min-h-screen overflow-x-auto w-[90%] md:w-[85%] mx-auto my-20 h-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+            <div className="min-h-screen overflow-x-auto w-[90%] md:w-[85%] mx-auto py-20 h-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
                 <h2 className="card-title text-3xl lg:text-5xl my-14"> 
                     <Typewriter
                         words={['My Campaigns', 'My Campaigns']}
                         loop={10}
                         cursor
                         cursorStyle='|'
+                        cursorColor='#ff2c64'
                         typeSpeed={70}
                         deleteSpeed={50}
                         delaySpeed={1000}
@@ -71,8 +72,8 @@ const MyCampaignsLayout = () => {
                                 <td>{campaign.minDonation} $</td>
                                 <td>{campaign.deadline}</td>
                                 <td className='space-x-5 flex flex-row'>
-                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn btn-primary  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-sm md:btn-md">Update</Link>
-                                    <button onClick={() => handleDelete(campaign._id)} className="btn btn-primary  bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white  btn-sm md:btn-md">Delete</button>
+                                    <Link to={`/updateCampaign/${campaign._id}`} className="btn bg-[#ff2c64] border-none text-white  btn-sm md:btn-md">Update</Link>
+                                    <button onClick={() => handleDelete(campaign._id)} className="btn  bg-[#ff2c64] border-none text-white  btn-sm md:btn-md">Delete</button>
                                 </td>
                             </tr>)
                         }

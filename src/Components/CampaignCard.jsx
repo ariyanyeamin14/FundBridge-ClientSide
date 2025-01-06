@@ -1,22 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CustomAnimation from './CustomAnimation';
+import { FaCalendarTimes } from 'react-icons/fa';
 
 const CampaignCard = ({ campaign }) => {
     const { _id, title, image, type, description, minDonation, deadline, name, email } = campaign
 
     return (
         <CustomAnimation>
-            <div className="card bg-gray-100 shadow-xl dark:shadow-dark dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-                <figure>
-                    <img className='h-[250px] lg:h-[280px] xl:h-[350px]' src={image} />
+            <div className="card bg-gray-100  shadow-dark dark:bg-gray-950 text-gray-900 dark:text-gray-100 h-[550px]">
+                <figure className='h-[250px] lg:h-[280px] xl:h-[250px]'>
+                    <img className='w-full h-full' src={image} />
                 </figure>
-                <div className="card-body space-y-5">
+                <div className="p-8 space-y-8">
                     <h2 className="card-title lg:text-2xl">{title}</h2>
-                    <p className='font-normal'>{description}</p>
-                    <p className='text-lg'>Deadline: {deadline}</p>
-                    <div className="card-actions justify-end">
-                        <Link to={`/campaign/${_id}`} className="btn bg-[#1d22b8] dark:bg-[#f0f647] dark:text-black border-none text-white btn-primary">See More</Link>
+                    <p className='font-medium'>{description}</p>
+                    <div className="flex items-center justify-between">
+                        <p className='text-lg'> <FaCalendarTimes className='text-[#ff2c64]  inline mr-4' /> {deadline}</p>
+                        <Link to={`/campaign/${_id}`} className="text-white  bg-[#ff2c64] px-8 py-3 rounded-3xl">See More</Link>
                     </div>
                 </div>
             </div>
