@@ -15,7 +15,7 @@ const Navbar = () => {
         <NavLink to="/testimonial">Testimonial</NavLink>
         <NavLink to="/volunteers">Volunteers</NavLink>
         { user && <NavLink to={'/addCampaign'}>Add New Campaign</NavLink> }
-        { user && <NavLink to={`/myCampaign/${user?.email}`}>My  Campaign</NavLink>}
+        { user && <NavLink to={`/myCampaign/${user?.email}`}>My Campaign</NavLink>}
         { user && <NavLink to={`/myDonations/${user?.email}`}>My Donations</NavLink>}
         
     </>
@@ -66,7 +66,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setActive(!active)} className={` bg-[#ff2c64] text-white  absolute grid right-2 z-10  p-6 gap-5 rounded-xl duration-1000   ${active ? "top-14 " : "-top-80"}`}>
+                <div onClick={() => setActive(!active)} className={` bg-[#ff2c64] text-white  absolute grid right-2 z-10  p-6 gap-5 rounded-xl duration-1000   ${active ? "top-14 " : "-top-96"}`}>
                     {links}
                 </div>
             </div>
