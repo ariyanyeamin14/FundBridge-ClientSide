@@ -19,6 +19,8 @@ import UpdateCampaign from './Layouts/UpdateCampaign';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import About from './Layouts/AboutPage';
+import TestimonialPage from './Layouts/TestimonialPage';
+import Volunteers from './Components/Volunteers';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +80,14 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About></About>
+      },
+      {
+        path: 'testimonial',
+        element: <TestimonialPage></TestimonialPage>
+      },
+      {
+        path: 'volunteers',
+        element: <Volunteers></Volunteers>
       }
     ]
   },

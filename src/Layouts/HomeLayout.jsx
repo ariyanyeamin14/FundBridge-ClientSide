@@ -4,6 +4,8 @@ import RunningCampaign from '../Components/RunningCampaign';
 import OurImpact from '../Components/OurImpact';
 import WhatPeopleSay from '../Components/WhatPeopleSay';
 import About from '../Components/About';
+import Volunteers from '../Components/Volunteers';
+import Contact from '../Components/Contact';
 
 const HomeLayout = () => {
     return (
@@ -22,6 +24,12 @@ const HomeLayout = () => {
             </section>
             <section>
                 <OurImpact></OurImpact>
+            </section>
+            <section>
+                <Volunteers></Volunteers>
+            </section>
+            <section>
+                <Contact></Contact>
             </section>
         </div>
     );

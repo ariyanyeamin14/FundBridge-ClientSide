@@ -20,7 +20,7 @@ import aboutImg5 from '../../src/assets/about/5.png'
 const About = () => {
     return (
         <div>
-            <div className='w-[90%] md:w-[85%] mx-auto pt-20 flex justify-between items-center'>
+            <div className='w-[90%] md:w-[85%] mx-auto pt-20 flex flex-col lg:flex-row justify-between items-center'>
                 <div className='flex-1'>
                     <h1 className='text-4xl md:text-5xl font-bold pb-16 leading-normal'>About Our Charity</h1>
                     <p className='leading-relaxed mb-6'>

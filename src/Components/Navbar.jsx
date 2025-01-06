@@ -12,6 +12,8 @@ const Navbar = () => {
         <NavLink to={'/'}>Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/campaigns">All Campaign</NavLink>
+        <NavLink to="/testimonial">Testimonial</NavLink>
+        <NavLink to="/volunteers">Volunteers</NavLink>
         { user && <NavLink to={'/addCampaign'}>Add New Campaign</NavLink> }
         { user && <NavLink to={`/myCampaign/${user?.email}`}>My  Campaign</NavLink>}
         { user && <NavLink to={`/myDonations/${user?.email}`}>My Donations</NavLink>}
@@ -26,7 +28,7 @@ const Navbar = () => {
             <div className=" bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
                 <div className='w-[95%] lg:[w-85%] navbar mx-auto  h-10 md:h-14'>
                     <div className="navbar-start w-fit lg:w-[50%]">
-                        <Link to={'/'} className="btn btn-ghost  text-xl px-0">FundBridge</Link>
+                        <Link to={'/'} className="text-2xl font-semibold  tracking-wide">Fund<span className='text-[#ff2c64]'>Bridge</span></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu gap-6 items-center menu-horizontal px-1">
