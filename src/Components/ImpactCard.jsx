@@ -6,7 +6,7 @@ const ImpactCard = ({ number, title, description }) => {
     const [counterOn, setCounterOn] = useState(false)
     return (
         <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-            <div id='impact' className='section dark:bg-gray-950 text-gray-900 bg-[#f7f8fa] rounded-xl text-center p-6 md:py-10 border-2 dark:border-gray-800 border-gray-200 shadow-xl space-y-6'>
+            <div id='impact' className='dark:bg-[#0c121c] text-gray-900 bg-[#f7f8fa] rounded-xl text-center p-6 md:py-10 border-2 dark:border-gray-950 border-gray-200 shadow-lg dark:shadow-dark space-y-6'>
                 <div className=''>
                     {
                         counterOn &&

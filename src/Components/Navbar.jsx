@@ -25,7 +25,7 @@ const Navbar = () => {
     }
     return (
         <div className='fixed top-0 w-full z-50 '>
-            <div className=" bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
+            <div className=" bg-gray-100 dark:bg-[#0c121c] text-gray-900 dark:text-gray-100">
                 <div className='w-[95%] lg:[w-85%] navbar mx-auto  h-10 md:h-14'>
                     <div className="navbar-start w-fit lg:w-[50%]">
                         <Link to={'/'} className="text-2xl font-semibold  tracking-wide">Fund<span className='text-[#ff2c64]'>Bridge</span></Link>

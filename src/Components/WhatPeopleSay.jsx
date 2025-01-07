@@ -20,9 +20,9 @@ const WhatPeopleSay = () => {
     ];
 
     return (
-        <div id="testimonial" className="section py-28 my-28 text-white">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">What people Say ?</h2>
-            <div className="w-[90%] md:w-[70%] mx-auto p-6">
+        <div id="testimonial" className="section py-32 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">What people Say ?</h2>
+            <div className="w-[90%] md:w-[70%] mx-auto">
                 <Swiper
                     modules={[Navigation, Autoplay]} // Register the necessary modules
                     spaceBetween={30}

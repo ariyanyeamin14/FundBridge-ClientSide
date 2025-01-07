@@ -20,9 +20,9 @@ const TestimonialPage = () => {
     ];
 
     return (
-        <div className="py-28  text-white">
+        <div className=" py-40 ">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">What people Say ?</h2>
-            <div className="w-[90%] md:w-[70%] mx-auto p-6">
+            <div className="w-[90%] md:w-[70%] mx-auto p-6 text-white">
                 <Swiper
                     modules={[Navigation, Autoplay]} // Register the necessary modules
                     spaceBetween={30}

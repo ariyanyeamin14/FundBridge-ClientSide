@@ -6,12 +6,12 @@ const Contact = () => {
     return (
         <div id='contact' className=''>
             <div className=' w-[90%]  md:w-[85%] py-20 mx-auto'>
-                <h1 className='text-4xl md:text-5xl font-bold text-center'>Contact With Us</h1>
-                <div className='flex flex-col lg:flex-row mt-14 gap-10 items-center'>
+                <h1 className='text-4xl md:text-5xl font-bold text-center '>Contact With Us</h1>
+                <div className='flex flex-col lg:flex-row  gap-10 items-center'>
                     <div className=' flex-1'>
                         <Lottie animationData={contactAnimation} loop={true} />
                     </div>
-                    <div className='flex-1 bg-[#f7f8fa] dark:bg-slate-950 p-10 rounded-2xl w-full space-y-8'>
+                    <div className='flex-1 bg-[#f7f8fa] dark:bg-[#0c121c] p-10 rounded-2xl w-full space-y-8'>
                         <div className='flex flex-col md:flex-row gap-6'>
                             <div className='flex-1'>
                                 <h4 className='uppercase text-xs mb-4'>Your Name</h4>

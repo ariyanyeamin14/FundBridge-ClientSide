@@ -97,7 +97,7 @@ const Register = () => {
     }
     return (
         <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-            <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0C1935] text-gray-900 dark:text-gray-100">
+            <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0c121c] text-gray-900 dark:text-gray-100">
                 <div className='text-center'>
                     <div className="btn btn-ghost nav-logo text-xl lg:text-2xl font-extrabold  mb-10"> <p>FundBridge</p> </div>
                     <h2 className='text-4xl font-semibold'>REGISTER</h2>

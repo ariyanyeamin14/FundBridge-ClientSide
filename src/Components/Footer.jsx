@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer id='footer' className=" bg-[#f7f8fa] overflow-x-auto  my-20 dark:bg-gray-950 dark:text-gray-100 text-gray-800">
+        <footer id='footer' className=" bg-[#f7f8fa] overflow-x-auto dark:bg-[#0c121c] dark:text-gray-100 text-gray-800">
             <div className='footer w-[90%] md:w-[85%] mx-auto py-20 dark:text-gray-100 text-gray-800'>
                 <aside className='md:justify-self-center'>
                     <Link to={'/'} className="text-3xl font-semibold  tracking-wide">Fund<span className='text-[#ff2c64]'>Bridge</span></Link>

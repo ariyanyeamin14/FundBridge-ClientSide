@@ -20,7 +20,7 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import About from './Layouts/AboutPage';
 import TestimonialPage from './Layouts/TestimonialPage';
-import Volunteers from './Components/Volunteers';
+import VolunteersPage from './Layouts/VolundeersPage';
 
 const router = createBrowserRouter([
   {
@@ -87,7 +87,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'volunteers',
-        element: <Volunteers></Volunteers>
+        element: <VolunteersPage></VolunteersPage>
       }
     ]
   },

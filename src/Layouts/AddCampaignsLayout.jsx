@@ -47,7 +47,7 @@ const AddNewCampaign = () => {
 
     return (
         <div className='add-campain'>
-            <div className="min-h-screen bg-gray-100 flex justify-center items-center py-20  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+            <div className=" bg-gray-100 flex justify-center items-center py-40  dark:bg-gray-900 text-gray-900 dark:text-gray-100">
                 <div className="w-[90%] mx-auto md:w-full max-w-3xl px-5 py-10 md:p-12 bg-white rounded-lg shadow-md  dark:bg-[#0C1935] text-gray-900 dark:text-gray-100">
                     <h2 className="card-title text-3xl lg:text-5xl my-8 md:my-14">
                             <Typewriter

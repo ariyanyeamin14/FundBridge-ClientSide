@@ -13,7 +13,7 @@ import volunteer7 from '../assets/volunteers/volundeer7.jpg'
 import volunteer8 from '../assets/volunteers/volundeer8.jpg'
 import volunteer9 from '../assets/volunteers/volundeer9.jpg'
 
-const Volunteers = () => {
+const VolunteersPage = () => {
     const slides = [
         { name: "Emily Carter", image: volunteer1 },
         { name: "Michael Johnson", image: volunteer2 },
@@ -27,7 +27,7 @@ const Volunteers = () => {
     ];
     
     return (
-        <div id='volunteer' className='w-[90%] md:w-[85%] mx-auto py-16'>
+        <div id='volunteer' className='w-[90%] md:w-[85%] mx-auto py-40'>
             <h1 className='text-4xl md:text-5xl font-bold text-center  leading-normal mb-16'>Our Volunteers</h1>
             <div className=''>
                 <Swiper
@@ -66,4 +66,4 @@ const Volunteers = () => {
     );
 };
 
-export default Volunteers;
+export default VolunteersPage;
