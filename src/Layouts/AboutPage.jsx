@@ -20,9 +20,9 @@ import aboutImg5 from '../../src/assets/about/5.png'
 const AboutPage = () => {
     return (
         <div>
-            <div className='w-[90%] md:w-[85%] mx-auto pt-20 flex justify-between items-center'>
+            <div className='w-[90%] md:w-[85%] mx-auto pt-20 flex flex-col lg:flex-row justify-between items-center'>
                 <div className='flex-1'>
-                    <h1 className='text-4xl md:text-5xl font-bold pb-16 leading-normal'>About Our Charity</h1>
+                    <h1 className='text-4xl md:text-5xl font-bold pb-16 leading-normal'>About Our Activities</h1>
                     <p className='leading-relaxed mb-6'>
                         Welcome to FundBridge, your trusted platform for crowdfunding success. We empower individuals, innovators, and dreamers to bring their ideas to life by connecting them with a community of supporters willing to make a difference.</p>
 
@@ -40,7 +40,17 @@ const AboutPage = () => {
             <div id='about-slider-bg' >
                 <div id='about-slider' className=' py-6'>
                     <Swiper
-                        slidesPerView={5}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2, // For screens <= 640px
+                            },
+                            768: {
+                                slidesPerView: 2, // For screens <= 768px
+                            },
+                            1024: {
+                                slidesPerView: 4, // For screens <= 1024px
+                            },
+                        }}
                         spaceBetween={30}
                         loop={true}
                         centeredSlides={true}

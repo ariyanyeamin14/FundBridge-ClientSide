@@ -20,7 +20,7 @@ const TestimonialPage = () => {
     ];
 
     return (
-        <div id="testimonial" className="section py-28 my-28 text-white">
+        <div className="py-28  text-white">
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">What people Say ?</h2>
             <div className="w-[90%] md:w-[70%] mx-auto p-6">
                 <Swiper

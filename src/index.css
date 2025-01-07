@@ -22,10 +22,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
 }
-.active{
-  color: #ff2c64;
-  font-weight: 500;
-}
+
 
 .swiper-pagination-bullet{
   display: none !important;
@@ -43,4 +40,17 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+@media (min-width: 100px) and (max-width: 1023px) {
+  .active{
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  .active{
+    color: #ff2c64;
+    font-weight: 500;
+  }
 }

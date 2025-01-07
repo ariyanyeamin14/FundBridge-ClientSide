@@ -24,7 +24,7 @@ const Navbar = () => {
         return setActive(!active)
     }
     return (
-        <div className='fixed top-0 w-full z-50'>
+        <div className='fixed top-0 w-full z-50 '>
             <div className=" bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
                 <div className='w-[95%] lg:[w-85%] navbar mx-auto  h-10 md:h-14'>
                     <div className="navbar-start w-fit lg:w-[50%]">
@@ -66,7 +66,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setActive(!active)} className={` bg-[#ff2c64] text-white  absolute grid right-2 z-10  p-6 gap-5 rounded-xl duration-1000   ${active ? "top-14 " : "-top-96"}`}>
+                <div onClick={() => setActive(!active)} className={` bg-[#ff2c64] lg:hidden text-white flex flex-col absolute top-16  z-10 py-10 px-16 rounded-md gap-10 duration-1000  h-screen ${active ? " -right-2 " : " -right-80 "}`}>
                     {links}
                 </div>
             </div>

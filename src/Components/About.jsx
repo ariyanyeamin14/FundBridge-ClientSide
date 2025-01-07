@@ -22,7 +22,7 @@ const About = () => {
         <div>
             <div className='w-[90%] md:w-[85%] mx-auto pt-20 flex flex-col lg:flex-row justify-between items-center'>
                 <div className='flex-1'>
-                    <h1 className='text-4xl md:text-5xl font-bold pb-16 leading-normal'>About Our Charity</h1>
+                    <h1 className='text-4xl md:text-5xl font-bold pb-16 leading-normal'>About Our Activities</h1>
                     <p className='leading-relaxed mb-6'>
                         Welcome to FundBridge, your trusted platform for crowdfunding success. We empower individuals, innovators, and dreamers to bring their ideas to life by connecting them with a community of supporters willing to make a difference.</p>
 
@@ -33,7 +33,7 @@ const About = () => {
                         Let’s create something extraordinary—one contribution at a time.
                     </p>
                     <div className='mt-10'>
-                        <Link to={`/about`} className="text-[#ff2c64] border-2 border-[#ff2c64] px-8 py-3 rounded-3xl">See More</Link>
+                        <Link to={`/about`} className="text-[#ff2c64] border-2 border-[#ff2c64] px-8 py-3 rounded-3xl uppercase">See More</Link>
                     </div>
                 </div>
                 <div className='flex-1'>

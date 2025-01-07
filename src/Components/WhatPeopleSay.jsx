@@ -46,7 +46,7 @@ const WhatPeopleSay = () => {
                             <div className="flex flex-col items-center text-center space-y-4">
                                 <div className="bg-[#ff2c64] p-10 rounded-2xl">
                                     <div><FaQuoteLeft size={50} /></div>
-                                    <p className="text-xl mt-5 font-light leading-normal mb-10 italic">
+                                    <p className="text-2xl mt-5 font-light leading-normal mb-10 italic">
                                         "{slide.content}"
                                     </p>
                                 </div>

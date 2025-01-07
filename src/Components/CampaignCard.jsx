@@ -20,7 +20,7 @@ const CampaignCard = ({ campaign }) => {
                             <FaCalendarTimes size={30} className='text-[#ff2c64]  inline mr-3' />
                             <p className='text-lg'> {deadline}</p>
                         </div>
-                        <Link to={`/campaign/${_id}`} className="text-white  bg-[#ff2c64] px-8 py-3 rounded-3xl">See More</Link>
+                        <Link to={`/campaign/${_id}`} className="text-white uppercase bg-[#ff2c64] px-8 py-3 rounded-3xl">See More</Link>
                     </div>
                 </div>
             </div>
