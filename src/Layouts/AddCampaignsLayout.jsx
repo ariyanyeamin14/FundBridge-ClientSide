@@ -183,7 +183,7 @@ const AddNewCampaign = () => {
                         <div className="pt-8">
                             <button
                                 type="submit"
-                                className="btn bg-[#ff2c64] border-none text-white  btn-primary w-full flex items-center justify-center"
+                                className=" bg-[#ff2c64] border-none text-white btn w-full flex items-center justify-center"
                             >
                                 <FaPlusCircle className="mr-2" />
                                 Add Campaign

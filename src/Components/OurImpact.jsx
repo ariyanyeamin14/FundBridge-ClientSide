@@ -4,7 +4,7 @@ import ImpactCard from './ImpactCard';
 
 const OurImpact = () => {
     return (
-        <div className='w-[90%] md:w-[85%] mx-auto py-20'>
+        <div id='impact' className='w-[90%] md:w-[85%] mx-auto py-20'>
             <h1 className='text-4xl md:text-5xl font-bold text-center pb-16 leading-normal'>Our Impact in Numbers</h1>
                 <div className='grid gap-7'>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-7'>

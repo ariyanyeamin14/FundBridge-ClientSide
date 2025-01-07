@@ -27,7 +27,7 @@ const Volunteers = () => {
     ];
     
     return (
-        <div className='w-[90%] md:w-[85%] mx-auto py-28'>
+        <div id='volunteer' className='w-[90%] md:w-[85%] mx-auto py-28'>
             <h1 className='text-4xl md:text-5xl font-bold text-center pb-16 leading-normal'>Our Volunteers</h1>
             <div className=''>
                 <Swiper

@@ -4,7 +4,7 @@ import contactAnimation from '../assets/contact/contact.json'
 
 const Contact = () => {
     return (
-        <div className=''>
+        <div id='contact' className=''>
             <div className=' w-[90%]  md:w-[85%] py-20 mx-auto'>
                 <h1 className='text-4xl md:text-5xl font-bold text-center'>Contact With Us</h1>
                 <div className='flex flex-col lg:flex-row mt-14 gap-10 items-center'>
