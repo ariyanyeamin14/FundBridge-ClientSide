@@ -54,3 +54,6 @@ Dependencies:
  15. sort-by: ^1.2.0,
  16. sweetalert2: ^11.14.5,
  17. swiper: ^11.2.0
+
+ Installation
+ Run npm install to install project dependencies.
